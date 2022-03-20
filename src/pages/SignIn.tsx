@@ -4,10 +4,10 @@ import React from 'react'
 import Icon from 'react-native-vector-icons/EvilIcons'
 
 //Components
-import {AppTextInput} from '../little-components/AppTextInput'
-import {SignView} from '../little-components/SignView'
-import {AppText} from '../little-components/AppText'
-import { AppButton } from '../little-components/AppButton'
+import {AppTextInput} from '../components/AppTextInput'
+import {SignView} from '../components/SignView'
+import {AppText} from '../components/AppText'
+import { AppButton } from '../components/AppButton'
 
 const SignIn = ({navigation}: any) => {
 

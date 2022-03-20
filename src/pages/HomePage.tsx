@@ -1,10 +1,10 @@
 import { SafeAreaView, StyleSheet, View } from 'react-native'
 import React, {useState} from 'react'
 
-import {AppText} from '../little-components/AppText'
-import {AppButton} from '../little-components/AppButton';
-import LChart from '../little-components/LChart'
-import Stats from '../little-components/Stats';
+import {AppText} from '../components/AppText'
+import {AppButton} from '../components/AppButton';
+import LChart from '../components/LChart'
+import Stats from '../components/Stats';
 
 import Icon from 'react-native-vector-icons/Entypo'
 
