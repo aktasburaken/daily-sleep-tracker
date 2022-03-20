@@ -14,6 +14,8 @@ export const AppButton = ({name, click, ...props}:AppTouchableOpacityProps) => (
     </TouchableOpacity>
   )
 
+  
+
 AppButton.AddData = ({...props}:AppTouchableOpacityProps)  => (
     <AppButton {...props} style={styles.addData} />
 )
@@ -21,6 +23,11 @@ AppButton.AddData = ({...props}:AppTouchableOpacityProps)  => (
 AppButton.Sign = ({...props}:AppTouchableOpacityProps) => (
     <AppButton {...props} style={styles.button} />
 )
+
+AppButton.GoBack = ({...props}:AppTouchableOpacityProps) => (
+    <AppButton {...props} style={styles.addData} />
+)
+
 
 const styles = StyleSheet.create({
     button: {
@@ -37,11 +44,9 @@ const styles = StyleSheet.create({
     },
     addData: {
         backgroundColor: '#469AE4',
-        marginLeft: '70%',
-        marginTop: 50,
+        marginTop: 40,
         width: 55,
         height: 55,
-        borderWidth: 2,
         borderColor: 'white',
         borderRadius: 50,
         justifyContent: 'center',

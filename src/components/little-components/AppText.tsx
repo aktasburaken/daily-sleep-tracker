@@ -23,7 +23,15 @@ AppText.HaveorNot = ({style, ...props}: AppTextProps) => (
 )
 
 AppText.GoodNight = ({style, ...props}: AppTextProps) => (
-    <AppText {...props} style={[styles.goodNight, style, ]} />
+    <AppText {...props} style={[styles.goodNight, style]} />
+)
+
+AppText.Stats = ({style, ...props}: AppTextProps) => (
+    <AppText {...props} style={[styles.statTitle, style]} />
+)
+
+AppText.Days = ({style, ...props}: AppTextProps) => (
+    <AppText {...props} style={[styles.days, style]} />
 )
 
 const styles = StyleSheet.create({
@@ -49,5 +57,13 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         marginTop: 25,
+    },
+    statTitle: {
+        fontSize: 10,
+        fontWeight: 'bold'
+    },
+    days: {
+        fontSize: 10,
+        fontWeight: 'bold'
     }
 })

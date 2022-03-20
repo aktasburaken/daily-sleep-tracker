@@ -1,6 +1,8 @@
 import { View, Text, SafeAreaView, StyleSheet, StatusBar, TouchableOpacity } from 'react-native'
 import React from 'react'
 
+import Icon from 'react-native-vector-icons/EvilIcons'
+
 //Components
 import {AppTextInput} from '../little-components/AppTextInput'
 import {SignView} from '../little-components/SignView'
@@ -11,13 +13,16 @@ const SignUp = ({navigation}: any) => {
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <StatusBar backgroundColor={'lightblue'} barStyle={'dark-content'}/>
+      <StatusBar backgroundColor={'white'} barStyle={'dark-content'}/>
 
       <SignView signUp={true}>
           <AppText.Title children='Sleepy Night' />
-          <AppTextInput placeHolder='username' margin />
-          <AppTextInput placeHolder='password' margin={false}/>
-          <AppTextInput placeHolder='e-mail' margin={false}/>
+
+          <View style={styles.notCenter}>
+          <AppTextInput.username icon={<Icon name="user" size={40} style={styles.marginTop}/>} placeHolder='username' margin />
+          <AppTextInput.password icon={<Icon name="lock" size={40} style={styles.marginTop}/>} placeHolder='password' margin={false}/>
+          <AppTextInput.email icon={<Icon name="envelope" size={40} style={styles.marginTop}/>} placeHolder='e-mail' margin={false}/>
+          </View>
 
           <AppButton.Sign name="Sign Up" click={() => {
               navigation.navigate('SignIn')
@@ -32,11 +37,6 @@ const SignUp = ({navigation}: any) => {
           </TouchableOpacity>
       </SignView>
 
-      <View style={styles.bed}>
-        <Text style={styles.signButtons}>Google</Text>
-        <Text style={styles.signButtons}>Facebook</Text>
-      </View>
-
       <AppText.GoodNight children={`Good night, sleep tight, \ndon't let the bed bugs bite!`} />
 
     </SafeAreaView>
@@ -50,26 +50,12 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor:'lightblue'
+    backgroundColor:'white'
   }, 
-  bed: {
-    justifyContent:'center',
-    alignItems: 'center',
-    padding: 15,
-    marginTop: 5,
-    height: 150,
-    width: '80%',
-    borderRadius: 30,
+  marginTop: {
+    marginTop:15
   },
-  signButtons: {
-    justifyContent:'center',
-    textAlign: 'center',
-    backgroundColor: '#3897f0',
-    padding: 13,
-    marginTop: 17,
-    width: '95%',
-    height: '40%',
-    borderRadius: 20,
-    color: 'white'
-  },
+  notCenter: {
+    width: '80%'
+  }
 })

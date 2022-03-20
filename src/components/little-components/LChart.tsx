@@ -12,7 +12,7 @@ const LChart = () => {
         backgroundGradientFromOpacity: 0.5,
         backgroundGradientTo: "white",
         backgroundGradientToOpacity: 1,
-        color: (opacity = 0.5) => `rgba(00, 50, 250,  ${opacity})`,
+        color: (opacity = 0.5) => `rgba(000, 150, 250,  ${opacity})`,
         strokeWidth: 2, // optional, default 3
         barPercentage: 0.5,
         useShadowColorFromDataset: false, // optional
@@ -25,8 +25,8 @@ const LChart = () => {
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [
           {
-            data: [20, 45, 28, 80, 99, 43, 33],
-            color: (opacity = 1) => `rgba(191, 221, 249, ${opacity})`, // optional
+            data: [11,0,6,11,2,14,11],
+            color: (opacity = 1) => `rgba(000, 150, 249, ${opacity})`, // optional
             strokeWidth: 2 // optional
           }
         ],

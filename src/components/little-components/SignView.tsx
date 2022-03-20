@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     width: '80%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#E4FDD8',
     borderRadius: 15,
   },
   signUp: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     width: '80%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#E4FDD8',
     borderRadius: 15,
   },
 })
